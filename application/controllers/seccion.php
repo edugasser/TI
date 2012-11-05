@@ -21,21 +21,34 @@ class Seccion extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
+	$this->load->model('mi_model');
     }
  
  
-	public function index()
+	public function tema($id)
 	{
-
+		//--- mostramos los libros ---/
+		$sql = "SELECT * FROM libro WHERE id_tema = '$id'ORDER BY id_libro DESC";
+		$data['info'] = $this->mi_model->get_sql($sql);	 
+		//--- mostramos los temas ---/
+		$sql = "SELECT * FROM tema";
+		$data['temas'] = $this->mi_model->get_sql($sql);
 		
+		//--- mostramos el tema ---/
+		$data['tema'] = $this->mi_model-> devolver_dato("tema","id_tema",$id,"titulo"); 
 		$data['contenido'] =  "listado_view";
- 
 		$this->load->view('page_view', $data);
 		
 	}
-	public function ficha()
+	public function ficha($id)
 	{
-
+		//--- mostramos los temas ---/
+		$sql = "SELECT * FROM tema";
+		$data['temas'] = $this->mi_model->get_sql($sql);
+		
+		//--- mostramos el libro ---/
+		$sql = "SELECT * FROM libro WHERE id_libro = '$id'";
+		$data['info'] = $this->mi_model->get_sql($sql);	 
 		
 		$data['contenido'] =  "ficha_view";
 		 

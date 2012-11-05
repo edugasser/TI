@@ -18,19 +18,25 @@ class Home extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct()
-    {
+	{
         parent::__construct();
-        $this->load->helper('url');
-    }
- 
+		$this->load->helper('url');
+		$this->load->model('mi_model');
+	}
+	public function temas(){
+			 
+	}
 	public function index()
 	{
-
+		//--- mostramos los libros ---/
+		$sql = "SELECT * FROM libro ORDER BY id_libro DESC";
+		$data['info'] = $this->mi_model->get_sql($sql);	 
+		//--- mostramos los temas ---/
+		$sql = "SELECT * FROM tema";
+		$data['temas'] = $this->mi_model->get_sql($sql);
 		
 		$data['contenido'] =  "home_view";
-		$data['lang'] =  "home_view";
-		$this->load->view('page_view', $data);
-		
+		$this->load->view('page_view', $data);	
 	}
  
 	

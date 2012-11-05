@@ -58,6 +58,8 @@ width: 205px;
 }
 .wrap_slider .album{
 	font-weight:bold;
+	font-size:16pt;
+	margin-bottom:10px;
 }
 .wrap_slider .right {
 width: 320px;

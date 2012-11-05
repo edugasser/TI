@@ -21,12 +21,11 @@
 			<ul id="menu-main-menu" class="menu">
 				<li><a href="<?php echo base_url();?>"><strong>Inicio</strong><span class="main-menu-description">Página principal</span></a></li>
 				<li style="width:170px;"><a href="#"><strong>Todos los libros</strong><span class="main-menu-description">Por temas </span></a>
-					<ul class="sub-menu">      
-						<li><a href="<?php echo base_url();?>seccion">Comedia</a></li>
-						<li><a href="<?php echo base_url();?>seccion">Comedia</a></li>
-						<li><a href="<?php echo base_url();?>seccion">Comedia</a></li>
-						<li><a href="<?php echo base_url();?>seccion">Comedia</a></li>
-						
+					<ul class="sub-menu">     
+						<?php if(!empty($temas)){?>
+						<?php foreach($temas as $row){?>	
+						<li><a href="<?php echo base_url();?>seccion/tema/<?php echo $row->id_tema;?>"><?php echo $row->titulo;?></a></li>
+						<?php }} ?>
 					</ul>
 					</li>
 				<li><a href="<?php echo base_url();?>"><strong>Novedades</strong><span class="main-menu-description">Últimos libros añadidos</span></a></li>
