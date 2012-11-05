@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url();?>assets/style.css" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/minimal-skin.css" type="text/css" media="screen"/>
- 
+ <script type="text/javascript" src="<?php echo base_url();?>assets/ajax_framework.js"></script>
 
  
 <!--- Bxslider ----------->

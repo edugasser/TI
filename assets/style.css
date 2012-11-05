@@ -168,6 +168,65 @@ clear: left;
 .grid_fourth1 .slideshow img{height:auto; width:auto;}
 .grid_fourth2 .slideshow img{height:auto; width:auto;}
 .grid_fourth3 .slideshow img{height:auto; width:auto;}
+
+
+div.autosuggest ul
+{
+	
+
+	list-style: none;
+	margin: 0 0 -4px 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #fff; /* fondo */
+	border-color: #f1ca7f;
+    border-style: solid;
+
+}
+
+div.autosuggest ul li
+{
+	color: #ccc; /* texto */
+	font-weight: bold;
+
+	padding: 0;
+	margin: 6px 6px 10px;
+	text-align: left;
+	
+}
+div.autosuggest ul li a
+{
+	font-size: 11px;
+	color: #3b5998; /* texto */
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	
+}
+
+div.autosuggest ul li a:hover
+{
+	background-color: #f1ca7f; 
+	color: #fff; /* texto */
+}
+.contactlist { list-style-type: none;line-height: 21px; }
+.contactlist li {list-style-type: none; border: 1px solid #eee; border-top: 0; position: relative; padding: 1px; }
+.contactlist li span.msgcount { 
+	position: absolute; top: 12px; right: 10px; font-size: 10px; padding: 3px 5px; line-height: 10px; color: #fff; background: #FB9337; font-weight: bold;  
+	-moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px;
+}
+.contactlist li a { padding: 8px 5px; display: block; color: #666; }
+.contactlist li.online a { background: url(../images/online.html) no-repeat right 16px; }
+.contactlist li.new a { font-weight: bold; }
+.contactlist li a:hover { background-color: #fcfcfc; text-decoration: none; }
+.contactlist li a img { vertical-align: middle; display: inline-block; margin-right: 10px; }
+
+ 
+
+
 /************************************************************************
 ************************************************************************
 ************************************************************************

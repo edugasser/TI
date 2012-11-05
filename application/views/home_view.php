@@ -2,10 +2,10 @@
 <div class="chatsearch">
 	<input  value="Buscador libros" 
 	onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
-	this.value = 'Buscador libros';" name="familia-q" id="familia-q" type="text" 
+	this.value = 'Buscador libros';" name="libro-q" id="libro-q" type="text" onkeyup="javascript:autosuggest()"
 	  />
 	
-	<div class="autosuggest"  id="familia"> </div>
+	<div class="autosuggest"  id="libro"> </div>
 </div>
 <div class="wrap_slider">
 <ul id="slider1">
