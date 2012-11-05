@@ -25,10 +25,14 @@ class Seccion extends CI_Controller {
     }
  
  
-	public function tema($id)
+	public function tema($id=null)
 	{
 		//--- mostramos los libros ---/
-		$sql = "SELECT * FROM libro WHERE id_tema = '$id'ORDER BY id_libro DESC";
+		if ($id == null){
+		$sql = "SELECT * FROM libro  ORDER BY fecha_registro ASC LIMIT 3";
+		}else{
+		$sql = "SELECT * FROM libro WHERE id_tema = '$id' ORDER BY id_libro DESC";
+		}
 		$data['info'] = $this->mi_model->get_sql($sql);	 
 		//--- mostramos los temas ---/
 		$sql = "SELECT * FROM tema";
@@ -40,7 +44,7 @@ class Seccion extends CI_Controller {
 		$this->load->view('page_view', $data);
 		
 	}
-	public function ficha($id)
+	public function ficha($id,$error=null)
 	{
 		//--- mostramos los temas ---/
 		$sql = "SELECT * FROM tema";
@@ -49,11 +53,27 @@ class Seccion extends CI_Controller {
 		//--- mostramos el libro ---/
 		$sql = "SELECT * FROM libro WHERE id_libro = '$id'";
 		$data['info'] = $this->mi_model->get_sql($sql);	 
-		
+		//--- mostramos los comentarios ---/
+		$sql = "SELECT * FROM comentario WHERE id_libro = '$id'";
+		$data['comentarios'] = $this->mi_model->get_sql($sql);	
+
+		$data['total'] = $this->mi_model->contar_datos('comentario','id_libro',$id);		
+		$data['id_libro'] = $id;
+		$data['error'] = $error;
 		$data['contenido'] =  "ficha_view";
 		 
 		$this->load->view('page_view', $data);
 		
+	}
+	public function comentar($id)
+	{
+		if ($_POST['autor'] == '' || $_POST['email'] == '' || $_POST['comentario'] == ''){
+			redirect('/seccion/ficha/'.$id.'/error');
+		}
+		
+		$array = array('autor' => $_POST['autor'],'id_libro' => $id,'comentario' => $_POST['comentario'],'email' => $_POST['email'],'fecha_registro' => date('Y-m-d'));
+		$this->mi_model->add("comentario",$array);	
+		redirect('/seccion/ficha/'.$id);
 	}
 	
 

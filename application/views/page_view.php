@@ -3,7 +3,7 @@
 
 
 <head>
-<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 <meta name="robots" content="index, follow" />
 
 <!-- page title, displayed in your browser bar -->

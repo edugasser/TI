@@ -5,12 +5,37 @@
 
 
 	<!-- ####### MAIN CONTAINER ####### -->
-		<div class='container_wrap fullwidth' id='main'>
+<?php
+ function getSubString($string, $length=NULL)
+{
+    //Si no se especifica la longitud por defecto es 50
+    if ($length == NULL)
+        $length = 50;
+    //Primero eliminamos las etiquetas html y luego cortamos el string
+    $stringDisplay = substr(strip_tags($string), 0, $length);
+    //Si el texto es mayor que la longitud se agrega puntos suspensivos
+    if (strlen(strip_tags($string)) > $length)
+        $stringDisplay .= ' ...';
+    return $stringDisplay;
+}
+?>
+	<div class='container_wrap fullwidth' id='main'>
 		
 			<div class='container'>
-
-				 <h1>Libros de <?php echo $tema;?></h1>
-				 <hr>
+			<div class="chatsearch">
+				<input  value="Buscador libros" 
+				onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
+				this.value = 'Buscador libros';" name="libro-q" id="libro-q" type="text" onkeyup="javascript:autosuggest()"
+				  />
+				
+				<div class="autosuggest"  id="libro"> </div>
+			</div>	
+			<?php if (!empty($tema)){?>
+				<h1>Libros de <?php echo $tema;?></h1> 
+			 <?php }else{?>
+				<h1>Novedades</h1>
+			 <?php }?>
+			 <hr>
 
 			<div class='hr hr_invisible'></div>
 			<br>
@@ -21,42 +46,41 @@
 				<h1 class='post-title'><a href=""><?php  echo  $row->titulo;?></a></h1>
 				
 				<div class='mini_slider'>
-					<div  class=' preloading  autoslide_false autoslidedelay__ slideshow_related fade_slider slideshow_container'>	 
+					  
 						<span class='bottom_shadow'></span>
 						<ul class='slideshow'  style='height: 130px; width: 130px;'>
 						<li class='featured featured_container1' >
-						<a href='http://www.kriesi.at/themes/corona/2011/03/31/this-is-a-nice-post/'><img src='<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>' width="130"title='Tower Bridge of London' alt='' /></a>
+						 <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><img src='<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>' width="130" title='<?php echo $row->titulo;?>' alt='<?php echo $row->titulo;?>' /></a>
 						</li>
 						</ul>
-					</div>
+					 
 				</div>			
 				
 				<!--meta info-->
 				<div class="blog-meta">
-				
 					<span class='post-meta-infos'>
-						<span class='date-container minor-meta'><?php echo $row->fecha_registro;?></span>
-						<span class='text-sep'>/</span>
-						<span class='comment-container minor-meta'>
-							<a href="" class="comments-link" ><strong>0</strong> Comentarios</a>
-						</span>	
-									
+						<span class='date-container minor-meta'><?php echo $row->fecha_registro;?></span>				
 					</span>		
 				</div><!--end meta info-->	
 				<div class="entry-content">		
-					<?php echo $row->descripcion?>
+					<?php echo getSubString($row->descripcion,650);?>
 					<p> <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>" class="more-link">Leer mas  &rarr;</a></p>				
 				</div>	
+				<!--tags info-->
+				<div class="blog-meta">
+					<span class='post-meta-infos'>
+						<span class='date-container minor-meta'>Etiquetas: <?php echo $row->tags;?></span>				
+					</span>		
+				</div><!--end tags info-->
 			</div><!--end post-entry-->
 			<?php }} ?>
-			
-			<div class='pagination'><span class='pagination-meta'>Page 1 of 2</span><span class='current'>1</span><a href='http://www.kriesi.at/themes/corona/blog/blog-right-sidebar/page/2/' class='inactive' >2</a></div>
-			</div> 
+								
+				<a href="javascript:history.back()">&larr; Volver atr&aacute;s   </a>
+			 </div> 
 			<!--end content-->
 			</div>
 				
-								
-				
+			
 			</div><!--end container-->
 
 	</div>

@@ -33,23 +33,19 @@ function createObject() {
 		return request_type;
 }
 
-function Confirm(delUrl) {
-  if (confirm("¿Está seguro que desea realizar esta acción?")) {
-    document.location = delUrl;
-  }
-}
+ 
 
 var http = createObject();
 
+ 
+function fill() {  
 
-function fill(div,i) { /*para el buscador 1 de asignar lider-celula */
-
-	e = document.getElementById(div+'-q');
+	e = document.getElementById('libro-q');
 	e.value=i;
 
 	document.getElementById(div).style.display="none";
 }
-/* i = div, f = nombre de la funcion search, t = template, id variable pasada*/
+ 
 function autosuggest() {
 	q = document.getElementById('libro-q').value;
 	 
@@ -66,9 +62,7 @@ function autosuggestReply(i) {
 		var response = http.responseText;
 		e = document.getElementById('libro');
 		if(response!=" "){
-			e.innerHTML=response;
- 
-					
+			e.innerHTML=response;	
 			e.style.display="block";
 		} else {
 			e.style.display="none";

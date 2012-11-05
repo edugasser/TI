@@ -168,7 +168,20 @@ clear: left;
 .grid_fourth1 .slideshow img{height:auto; width:auto;}
 .grid_fourth2 .slideshow img{height:auto; width:auto;}
 .grid_fourth3 .slideshow img{height:auto; width:auto;}
-
+div.autosuggest
+{
+	position: absolute;  
+	 top:20px;
+	-moz-border-radius: 2px; 
+	display: none;
+	-webkit-border-radius: 2px; 
+	border-radius: 2px; 
+	background: #fff; 
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+	 z-index: 1000;
+}
 
 div.autosuggest ul
 {
@@ -181,6 +194,7 @@ div.autosuggest ul
 	background-color: #fff; /* fondo */
 	border-color: #f1ca7f;
     border-style: solid;
+     z-index: 200;
 
 }
 
