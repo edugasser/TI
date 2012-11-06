@@ -57,8 +57,17 @@
 	<h4>El motivo de esta web es la realización de una práctica de la asignatura Tencologías de la Información.
 		Se trata de una librería on-line donde se pueden consultar libros, ordenados por categorías, y opiniones de los mismos.
 	</h4>
-	 
-	<br>	
+	<p>La web contiene las siguientes tecnologías:</p>
+	<ul>
+		<li>- PHP</li> 
+		<li>- MySql (información de libros/temas)</li>
+		<li>- CSS</li>
+		<li>- XML (enlaces de interés)</li>
+		<li>- Javascript (visor de imágenes)</li>
+		<li>- Ajax (buscador de libros)</li>
+	</ul>
+	<p>Está realizada mediante el framework <a href="www.codeigniter.com">Codeigniter</a>. </p>
+	<hr>
 	<h3 class="widgettitle">Enlaces de interés</h3>		
 	<ul>
 	<div id="enlaces"></div> 
