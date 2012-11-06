@@ -43,7 +43,7 @@
 			<?php if (!empty($info)){?>
 			<?php foreach($info as $row){?>
 			<div class='post-entry'>		
-				<h1 class='post-title'><a href=""><?php  echo  $row->titulo;?></a></h1>
+				<h1 class='post-title'><a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><?php  echo  $row->titulo;?></a></h1>
 				
 				<div class='mini_slider'>
 					  
