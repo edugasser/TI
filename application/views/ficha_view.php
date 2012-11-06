@@ -21,9 +21,8 @@
 			<?php if (!empty($info)){?>
 			<?php foreach($info as $row){?>
 			<div class='post-entry'>
-				<h1 class='post-title'>
-				<a href="" rel="bookmark" title="Permanent Link: This is a nice post (small preview image)"><?php echo $row->titulo;?></a>
-				</h1>
+				<h1 class='post-title'><a href="" title="<?php echo $row->titulo;?>"><?php echo $row->titulo;?></a>
+</h1>
 
 				<div class='mini_slider'>
 				<div  class='preloading  autoslide_false autoslidedelay__ slideshow_related fade_slider slideshow_container'>
