@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+     <lista>
+          <link>
+               <titulo>Amazon</titulo>
+               <href>http://www.amazon.es</href>
+          </link>
+          <link>
+               <titulo>Casa del libro</titulo>
+               <href>http://www.casadellibro.com</href>
+          </link>
+          <link>
+               <titulo>El Corte Ingés Libros</titulo>
+               <href>www.elcorteingles.es/tienda/libros/</href>
+          </link>
+	   <link>
+               <titulo>Iber Libro</titulo>
+               <href>http://www.iberlibro.com/</href>
+          </link>
+     </lista>
