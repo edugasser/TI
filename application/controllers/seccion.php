@@ -54,7 +54,7 @@ class Seccion extends CI_Controller {
 	 
 		$config['base_url'] = base_url().'seccion/tema/'.$id;
 		$config['total_rows'] = $this->mi_model->get_num_rows($id);
-		$config['per_page']   = 1;
+		$config['per_page']   = 3;
 		$config['num_links']   = 20;
 		//iniciamos la paginacion
 		$this->pagination->initialize($config);
