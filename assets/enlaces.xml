@@ -12,8 +12,16 @@
                <titulo>El Corte Ingés Libros</titulo>
                <href>www.elcorteingles.es/tienda/libros/</href>
           </link>
-	   <link>
+	      <link>
                <titulo>Iber Libro</titulo>
                <href>http://www.iberlibro.com/</href>
+          </link>
+          <link>
+               <titulo>Universidad Islas Baleares</titulo>
+               <href>http://www.uib.es/</href>
+          </link>
+          <link>
+               <titulo>Google Libros</titulo>
+               <href>http://www.books.google.com/</href>
           </link>
      </lista>
