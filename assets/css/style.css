@@ -34,7 +34,7 @@ width: 210px;
 float: left;
 }
 
-.chatsearch {float:right; padding: 5px;  overflow: hidden; width: 240px; margin-right:10px;margin-top: -30px;}
+.chatsearch {float:right; padding: 5px;  overflow: hidden; width: 240px; margin-right:10px;}
 .chatsearch input { 
 	float:left;
 	border: 1px solid #ddd;   padding: 7px 5px 7px 35px;  	width: 200px;	 background: #fff url(../../assets/images/search.png) no-repeat left center; 
@@ -59,7 +59,7 @@ position:relative; display:table;
  
  
 /*default image handling*/
-img { border:none; padding: 0; margin:0; display:block;}
+
  
 /*the first class overwrites both columns and grid container margins.*/
 div .first{
@@ -69,7 +69,7 @@ clear: left;
 div.autosuggest
 {
 	position: absolute;  
-	 top:20px;
+	 top:160px;
 	-moz-border-radius: 2px; 
 	display: none;
 	-webkit-border-radius: 2px; 

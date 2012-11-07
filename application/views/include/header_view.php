@@ -14,9 +14,33 @@
 						<?php }} ?>
 					</ul>
 					</li>
-				<li><a href="<?php echo base_url();?>seccion/tema"><strong>Novedades</strong><span class="main-menu-description">&Uacute;ltimos libros a&ntilde;adidos</span></a></li>
-			</ul>
+				<li><a href="<?php echo base_url();?>seccion/novedades"><strong>Novedades</strong><span class="main-menu-description">&Uacute;ltimos libros a&ntilde;adidos</span></a></li>
+			 
+				
+			 
+				</ul>
+				<div id="google_translate_element" >
+				<div class="chatsearch" style="margin-top:-9px;">
+					<input  value="Buscador libros" 
+					onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
+					this.value = 'Buscador libros';" name="libro-q" id="libro-q" type="text" onkeyup="javascript:autosuggest()"  onkeydown="javascript:quit()"/>
+					
+					<div class="autosuggest"  id="libro"> </div>
+				</div>
 		</div>
 	</div>
 	<!-- end container-->
-				
+	
+					
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+        document.getElementById(':1.targetLanguage').style.fontSize = '8pt';
+      
+    }
+
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

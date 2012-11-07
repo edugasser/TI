@@ -24,16 +24,53 @@ class Seccion extends CI_Controller {
 	$this->load->model('mi_model');
     }
  
+    public function novedades(){
+	    $this->load->library('pagination');
+	 
+		$config['base_url'] = base_url().'seccion/novedades';
+		$config['total_rows'] =  $this->db->get('libro')->num_rows();
+		$config['per_page']   = 3;
+		$config['num_links']   = 20;
+		//iniciamos la paginacion
+		$this->pagination->initialize($config);
+		$uri = $this->uri->segment(3);
  
+		if ($uri ==null){$uri=0;}
+		$sql = "SELECT * FROM libro  ORDER BY fecha_registro ASC limit $uri,3"; 
+		$data['info'] = $this->mi_model->get_sql($sql);	 
+
+		//--- mostramos los temas ---/
+		$sql = "SELECT * FROM tema";
+		$data['temas'] = $this->mi_model->get_sql($sql);
+		
+  
+		$data['contenido'] =  "listado_view";
+		$this->load->view('page_view', $data);
+    }
 	public function tema($id=null)
 	{
+		//--- preparamos la paginacion --/
+		$this->load->library('pagination');
+	 
+		$config['base_url'] = base_url().'seccion/tema/'.$id;
+		$config['total_rows'] = $this->mi_model->get_num_rows($id);
+		$config['per_page']   = 1;
+		$config['num_links']   = 20;
+		//iniciamos la paginacion
+		$this->pagination->initialize($config);
+		$uri = $this->uri->segment(4);
+		
+		
 		//--- mostramos los libros ---/
 		if ($id == null){
-		$sql = "SELECT * FROM libro  ORDER BY fecha_registro ASC LIMIT 3";
+			if ($uri ==null){$uri=0;}
+			$sql = "SELECT * FROM libro  ORDER BY fecha_registro ASC limit $uri,3";
 		}else{
-		$sql = "SELECT * FROM libro WHERE id_tema = '$id' ORDER BY id_libro DESC";
+			if ($uri ==null){$uri=0;}
+			$sql = "SELECT * FROM libro WHERE id_tema = '$id'  ORDER BY id_libro DESC limit $uri,3";
 		}
 		$data['info'] = $this->mi_model->get_sql($sql);	 
+
 		//--- mostramos los temas ---/
 		$sql = "SELECT * FROM tema";
 		$data['temas'] = $this->mi_model->get_sql($sql);

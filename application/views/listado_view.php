@@ -22,14 +22,7 @@
 	<div class='container_wrap fullwidth' id='main'>
 		
 			<div class='container'>
-			<div class="chatsearch">
-				<input  value="Buscador libros" 
-				onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
-				this.value = 'Buscador libros';" name="libro-q" id="libro-q" type="text" onkeyup="javascript:autosuggest()"
-				  />
-				
-				<div class="autosuggest"  id="libro"> </div>
-			</div>	
+		 	
 			<?php if (!empty($tema)){?>
 				<h1>Libros de <?php echo $tema;?></h1> 
 			 <?php }else{?>
@@ -74,13 +67,14 @@
 				</div><!--end tags info-->
 			</div><!--end post-entry-->
 			<?php }} ?>
-								
+									<?php echo $this->pagination->create_links();?>
+									<br>		
 				<a href="javascript:history.back()">&larr; Volver atr&aacute;s   </a>
 			 </div> 
 			<!--end content-->
 			</div>
 				
-			
+
 			</div><!--end container-->
 
 	</div>

@@ -13,13 +13,7 @@
 }
 ?>
 <div class="container">
-<div class="chatsearch">
-	<input  value="Buscador libros" 
-	onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
-	this.value = 'Buscador libros';" name="libro-q" id="libro-q" type="text" onkeyup="javascript:autosuggest()"  onkeydown="javascript:quit()"/>
-	
-	<div class="autosuggest"  id="libro"> </div>
-</div>
+ 
 <div class="wrap_slider">
 <ul id="slider1">
 <?php if(!empty($info)){?>
