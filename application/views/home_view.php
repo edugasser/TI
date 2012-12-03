@@ -20,10 +20,10 @@
 <?php foreach($info as $row){?>
   <li>
     <div class="left">
-      <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><img src="<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>"/></a>
+      <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><img alt=<?php echo $row->titulo;?>" title="<?php echo $row->titulo;?>" src="<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>"/></a>
     </div>
     <div class="right">
-      <div class="album"><?php echo $row->titulo;?></div>
+      <div class="album"><a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><?php echo $row->titulo;?></a></div>
       <div class="band">
 	<?php echo getSubString($row->descripcion,650);?>  
 	<br>De <?php echo $row->autor;?>

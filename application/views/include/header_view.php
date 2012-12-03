@@ -1,6 +1,6 @@
 <!-- ####### HEAD CONTAINER ####### -->
 <div class='container_wrap slideshow_big_container' id='header'>				
-	
+
 	<div class='container main_menu'>				
 		<h1 class='logo bg-logo'><a href='<?php echo base_url();?>/home'>Libreria TI</a></h1>
 		<div class="menu-main-menu-container">
@@ -16,10 +16,10 @@
 					</li>
 				<li><a href="<?php echo base_url();?>seccion/novedades"><strong>Novedades</strong><span class="main-menu-description">&Uacute;ltimos libros a&ntilde;adidos</span></a></li>
 			 
-				
-			 
 				</ul>
 				<div id="google_translate_element" >
+				 <div class="fb-like" data-href="http://ec2-54-247-9-188.eu-west-1.compute.amazonaws.com/libros/" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+	
 				<div class="chatsearch" style="margin-top:-9px;">
 					<input  value="Buscador libros" 
 					onfocus="if (this.value == 'Buscador libros') this.value = '';" onblur="if (this.value == '')
