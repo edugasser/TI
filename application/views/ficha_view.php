@@ -33,7 +33,7 @@
 				</ul>
 				</div>
 				</div>			
-				
+
 				<!--meta info-->
 				<div class="blog-meta">
 				
@@ -41,9 +41,10 @@
 						<span class='date-container minor-meta'><?php echo $row->fecha_registro;?></span>
 						<span class='text-sep'>/</span>
 						<span class='comment-container minor-meta'>
-						<strong><?php echo $total;?></strong> Comentarios					</span>	
+						<strong><?php echo $total;?></strong> Comentarios | </span>	
 					
 					</span>		
+									<div class="fb-like" data-href="http://ec2-54-247-9-188.eu-west-1.compute.amazonaws.com/libros/ficha/<?php echo $id_libro;?>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 				</div><!--end meta info-->	
 
 				<div class="entry-content">		

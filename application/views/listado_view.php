@@ -64,6 +64,7 @@
 					<span class='post-meta-infos'>
 						<span class='date-container minor-meta'>Etiquetas: <?php echo $row->tags;?></span>				
 					</span>		
+					 
 				</div><!--end tags info-->
 			</div><!--end post-entry-->
 			<?php }} ?>
