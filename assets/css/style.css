@@ -69,7 +69,7 @@ clear: left;
 div.autosuggest
 {
 	position: absolute;  
-	 top:160px;
+	 top:180px;
 	-moz-border-radius: 2px; 
 	display: none;
 	-webkit-border-radius: 2px; 
