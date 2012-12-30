@@ -32,7 +32,7 @@ a:hover
 		<a href='<?php echo site_url('admin/libros_admin')?>'>Libros</a> |
 		<a href='<?php echo site_url('admin/temas_admin')?>'>Temas</a> |
 		<a href='<?php echo site_url('admin/comentarios_admin')?>'>Comentarios</a> |
-
+<a href='<?php echo site_url('auth/logout')?>'>Salir</a> |
 	</div>
 	<div style='height:20px;'></div>  
     <div>

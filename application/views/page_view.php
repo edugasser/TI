@@ -8,7 +8,7 @@
 <META NAME="keywords" CONTENT="comentarios, libros, opiniones, acerca de libros, leer, lectura">
 <META NAME="description" CONTENT="Bookblog TI es un blog con el cual pretendemos fomentar la cultura, el debate y el excepcional y apasionante hábito de la lectura.">
 <!-- page title, displayed in your browser bar -->
-<title>Librer&iacute;a TI</title>
+<title>BookBlog - Librería en Internet : Opiniones, valoración y comentarios </title>
 
 
 <!-- add css stylesheets -->	

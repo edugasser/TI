@@ -8,7 +8,7 @@ class Admin extends CI_Controller {
 		
 		$this->load->database();
 		$this->load->helper('url');
-		
+		$this->load->library('Tank_auth');
 		$this->load->library('grocery_CRUD');	
 	}
 	
@@ -20,11 +20,15 @@ class Admin extends CI_Controller {
  
 	function index()
 	{
+	if ($this->tank_auth->is_logged_in()){
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
-	}	
+	}else{
+		redirect('auth/login');
+	}}	
 	
 	function libros_admin()
 	{
+	if ($this->tank_auth->is_logged_in()){
 		try{
 			/* This is only for the autocompletion */
 			$crud = new grocery_CRUD();
@@ -40,9 +44,13 @@ class Admin extends CI_Controller {
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
+	}else{
+		redirect('auth/login');
+	}
 	}
 	function temas_admin()
 	{
+	if ($this->tank_auth->is_logged_in()){
 		try{
 			/* This is only for the autocompletion */
 			$crud = new grocery_CRUD();
@@ -57,10 +65,12 @@ class Admin extends CI_Controller {
 			
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
-		}
+		}}else{
+		redirect('auth/login');
+	}
 	}
 	function comentarios_admin()
-	{
+	{	if ($this->tank_auth->is_logged_in()){
 		try{
 			/* This is only for the autocompletion */
 			$crud = new grocery_CRUD();
@@ -75,7 +85,9 @@ class Admin extends CI_Controller {
 			
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
-		}
+		}}else{
+		redirect('auth/login');
+	}
 	}
 	 
 }
