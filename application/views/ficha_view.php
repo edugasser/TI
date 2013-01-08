@@ -69,7 +69,7 @@
 				<li class="comment even thread-even depth-1" id="li-comment-3">
 					<div id="comment-3">
 						<div class="gravatar">
-							<img alt='' src='http://0.gravatar.com/avatar/0f40cc42b2f6ac7fbff31030a84f774b?s=36&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D36&amp;r=G' class='avatar avatar-36 photo' height='36' width='36' />			
+							<img alt='img' src='http://0.gravatar.com/avatar/0f40cc42b2f6ac7fbff31030a84f774b?s=36&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D36&amp;r=G' class='avatar avatar-36 photo' height='36' width='36' />			
 						</div>
 						
 						<!-- display the comment -->

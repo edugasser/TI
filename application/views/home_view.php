@@ -20,7 +20,7 @@
 <?php foreach($info as $row){?>
   <li>
     <div class="left">
-      <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><img alt=<?php echo $row->titulo;?>" title="<?php echo $row->titulo;?>" src="<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>"/></a>
+      <a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><img alt="<?php echo $row->titulo;?>" title="<?php echo $row->titulo;?>" src="<?php echo base_url();?>assets/portadas/<?php echo $row->img;?>"/></a>
     </div>
     <div class="right">
       <div class="album"><a href="<?php echo base_url();?>seccion/ficha/<?php echo $row->id_libro;?>"><?php echo $row->titulo;?></a></div>
@@ -51,7 +51,7 @@
 	<h4>El motivo de esta web es la realización de una práctica de la asignatura Tencologías de la Información.
 		Se trata de una librería on-line donde se pueden consultar libros, ordenados por categorías, y opiniones de los mismos.
 	</h4>
-	<h2>Enlaces de interés <a target="_blank" title="Anuncio Amazon"href="http://www.amazon.es"><img class="floatright" src="<?php echo base_url();?>assets/images/300x250.gif"></a></h2>	
+	<h2>Enlaces de interés <a target="_blank" title="Anuncio Amazon"href="http://www.amazon.es"><img alt="promocion" class="floatright" src="<?php echo base_url();?>assets/images/300x250.gif"></a></h2>	
 	<ul>
 	<div id="enlaces"></div> 
 	</ul>
